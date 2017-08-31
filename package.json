@@ -2,9 +2,9 @@
   "name": "seneca-mesh-example",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "client.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "fuge shell fuge/fuge.yml"
   },
   "author": "",
   "license": "ISC",

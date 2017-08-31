@@ -1,4 +1,5 @@
 var Seneca = require('seneca');
+var chalk = require('chalk');
 
 Seneca({log: 'test'})
 
@@ -12,10 +13,10 @@ Seneca({log: 'test'})
     setInterval(function() {
       // send a message out into the network
       // the network will know where to send format:hex messages
-      si.act({ format: 'hex'}, function (err, out) {
+      si.act({ random: 'hex'}, function (err, out) {
     
         // prints random
-        console.log(out ? out.color : 'null');
+        console.log(out ? chalk.hex(out.color).bold(out.color) : 'null');
       })
     }, 1000);    
   });

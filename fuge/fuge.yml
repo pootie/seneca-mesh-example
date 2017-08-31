@@ -1,0 +1,24 @@
+fuge_global:
+  tail: true
+  monitor: false
+  auto_generate_environment: false
+  monitor_excludes:
+    - '**/node_modules/**'
+    - '**/.git/**'
+    - '**/*.log'
+base:
+  type: node
+  path: ../
+  run: base.js
+service:
+  type: node
+  path: ../
+  run: color-service.js
+service-v2:
+  type: node
+  path: ../
+  run: color-service-v2.js
+# client:
+#   type: node
+#   path: ../
+#   run: index.js      

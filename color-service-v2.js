@@ -1,4 +1,5 @@
 var Seneca = require('seneca');
+var randomColor = require('randomcolor'); 
 
 Seneca()
   // Uncomment to get detailed logs
@@ -6,7 +7,7 @@ Seneca()
   
   // provide an action for the format:hex pattern
   .add('random:hex', function (msg, reply) {
-    var color = '#ff0000';
+    var color = randomColor();
     reply({color: color})
   })
 
